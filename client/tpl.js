@@ -1,6 +1,6 @@
 Template.items.animations({
   ".item": {
-    container: ".container", // container of the ".item" elements
+    container: ".container-items", // container of the ".item" elements
     in: "fade-in", // class applied to inserted elements
     out: "fade-out" // class applied to removed elements
   }

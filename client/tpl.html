@@ -1,24 +1,27 @@
 <head>
   <title>Template Animations Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-darken-1 m0 p0">
   {{> items}}
 </body>
 
 <template name="items">
   <div class="container">
-    <h1 class="center">Template Animations Demo</h1>
+    <h1 class="center px1 py0">Template Animations Demo</h1>
     <div class="block center">
-      <div><a href="http://github.com/gwendall/meteor-template-animations-demo" target="_blank">Demo repo</a></div>
-      <div><a href="http://github.com/gwendall/meteor-template-animations" target="_blank">Package repo</a></div>
-      <div class="button mt2" data-add-item>Add item</div>
+      <div><a href="http://github.com/gwendall/meteor-template-animations-demo" target="_blank">Demo on Github</a></div>
+      <div><a href="http://github.com/gwendall/meteor-template-animations" target="_blank">Package on Github</a></div>
+      <div class="button mt2 mb2" data-add-item>See it in action</div>
     </div>
-    {{#each items}}
-      <div class="item block clearfix mt1 p1 bg-darken-1">
-        {{title}}
-        <div class="button button-small bg-red right regular" data-remove-item>Remove</div>
-      </div>
-    {{/each}}
+    <div class="container-items block bg-white">
+      {{#each items}}
+        <div class="item block clearfix m0 p1 bg-white border-top border-bottom border-darken-1">
+          {{title}}
+          <div class="button button-small bg-red right regular" data-remove-item>Remove</div>
+        </div>
+      {{/each}}
+    </div>
   </div>
 </template>
