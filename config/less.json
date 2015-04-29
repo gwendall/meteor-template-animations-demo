@@ -1,0 +1,9 @@
+{
+  "enableAutoprefixer": true,
+  "autoprefixerOptions": {
+      "browsers": ["> 2%", "last 2 versions"],
+      "cascade": true
+  },
+  "useIndex": true,
+  "indexFilePath": "client/tpl.less"
+}

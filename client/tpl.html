@@ -1,0 +1,24 @@
+<head>
+  <title>Template Animations Demo</title>
+</head>
+
+<body>
+  {{> items}}
+</body>
+
+<template name="items">
+  <div class="container">
+    <h1 class="center">Template Animations Demo</h1>
+    <div class="block center">
+      <div><a href="http://github.com/gwendall/meteor-template-animations-demo" target="_blank">Demo repo</a></div>
+      <div><a href="http://github.com/gwendall/meteor-template-animations" target="_blank">Package repo</a></div>
+      <div class="button mt2" data-add-item>Add item</div>
+    </div>
+    {{#each items}}
+      <div class="item block clearfix mt1 p1 bg-darken-1">
+        {{title}}
+        <div class="button button-small bg-red right regular" data-remove-item>Remove</div>
+      </div>
+    {{/each}}
+  </div>
+</template>
