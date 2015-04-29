@@ -1,5 +1,7 @@
 Template.items.animations({
   ".item": {
+    animateInitial: true, // animate the intial elements
+    animateInitialStep: 200, // Step between each animation for each initial item
     container: ".container-items", // container of the ".item" elements
     in: "fade-in", // class applied to inserted elements
     out: "fade-out" // class applied to removed elements
@@ -7,6 +9,9 @@ Template.items.animations({
 });
 
 Items = new Mongo.Collection("items", { connection: null });
+_.each(_.range(0, 3), function(i) {
+  Items.insert({ title: Fake.word() });
+});
 
 Template.items.helpers({
   items: function() {

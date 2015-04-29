@@ -14,7 +14,7 @@ fastclick@1.0.3
 geojson-utils@1.0.3
 grove:less@0.1.1
 gwendall:jquery-animation-callback@0.1.0
-gwendall:template-animations@0.1.0
+gwendall:template-animations@0.1.1
 gwendall:ui-hooks@0.1.1
 html-tools@1.0.4
 htmljs@1.0.4
