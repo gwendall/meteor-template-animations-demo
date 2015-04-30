@@ -3,8 +3,8 @@ Template.items.animations({
     animateInitial: true, // animate the intial elements
     animateInitialStep: 200, // Step between each animation for each initial item
     container: ".container-items", // container of the ".item" elements
-    in: "fade-in", // class applied to inserted elements
-    out: "fade-out" // class applied to removed elements
+    in: "animated fast fadeInLeft", // class applied to inserted elements (animations courtesy of animate.css)
+    out: "animated fast fadeOutRight" // class applied to removed elements
   }
 });
 
