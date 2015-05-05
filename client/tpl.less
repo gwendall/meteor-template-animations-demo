@@ -1,16 +1,22 @@
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.item {
-  margin-bottom: 2px;
-}
-
-.container {
-  max-width: 600px;
-}
+.item { margin-bottom: 2px; }
+.container { max-width: 600px; }
+.fill { min-height: 100vh; }
 
 .animated.fast {
   -webkit-animation-duration: .4s;
   animation-duration: .4s;
+}
+
+.sidebar {
+  width: 400px;
+  box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.25);
+}
+
+@media screen and (max-width: 639px) {
+  .sidebar { width: 100%; margin-top: 20px; }
 }

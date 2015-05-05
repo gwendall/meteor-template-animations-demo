@@ -4,12 +4,22 @@
 </head>
 
 <body class="bg-darken-1 m0 p0">
-  {{> items}}
+
+  <div class="sm-flex flex-1 fill">
+    <div class="flex-auto relative">
+      {{> items}}
+    </div>
+    <div class="sidebar overflow-hidden bg-white z2">
+      {{> logs}}
+    </div>
+  </div>
+
 </body>
 
 <template name="items">
+
   <div class="container">
-    <h1 class="center px1 py0">Template Animations Demo</h1>
+    <div class="h2 center px1 py0 mt2 mb2">Template Animations Demo</div>
     <div class="block center">
       <div><a href="http://github.com/gwendall/meteor-template-animations-demo" target="_blank">Demo on Github</a></div>
       <div><a href="http://github.com/gwendall/meteor-template-animations" target="_blank">Package on Github</a></div>
@@ -18,9 +28,21 @@
     <div class="container-items block">
       {{#each items}}
         <div class="item block clearfix m0 p1 bg-white border border border-darken-2 rounded">
-          {{title}}
-          <div class="button button-small bg-red right regular" data-remove-item>Remove</div>
+          <span class="title">{{title}}</span>
+          <div class="button button-outline button-small right regular" data-remove-item>Remove</div>
         </div>
+      {{/each}}
+    </div>
+  </div>
+
+</template>
+
+<template name="logs">
+  <div class="container">
+    <div class="h2 center px1 py0 mt2 mb2">Callbacks</div>
+    <div class="block left-align p2">
+      {{#each logs}}
+        <div class="block">{{text}}</div>
       {{/each}}
     </div>
   </div>
