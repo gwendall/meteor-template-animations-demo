@@ -27,9 +27,13 @@
     </div>
     <div class="container-items block">
       {{#each items}}
-        <div class="item block clearfix m0 p1 bg-white border border border-darken-2 rounded">
-          <span class="title">{{title}}</span>
-          <div class="button button-outline button-small right regular" data-remove-item>Remove</div>
+        <div class="flex mb2 item clearfix m0 p1 bg-white border border border-darken-2 rounded">
+          <img class="flex-none pic bg-silver border border-darken-2 circle mr1" src="{{pic}}"/>
+          <div class="flex-auto">
+            <div class="title bold">{{fullname}}</div>
+            <div class="gray h5">{{email}}</div>
+          </div>
+          <div class="flex flex-center button button-outline button-small right regular px3" data-remove-item>Remove</div>
         </div>
       {{/each}}
     </div>
